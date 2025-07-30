@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #fff1f7);
+}
+
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  padding: 1.5rem;
+  z-index: 2;
+  padding-bottom: 200px;
+}
+
+.title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #ff3c6f;
+  background: linear-gradient(45deg, #ffe6f0, #ffb3d1);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 3px 10px rgba(255, 90, 150, 0.3);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  background: rgba(255, 200, 236, 0.85);
+  color: #880e4f;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff90b3, #ffa3d6);
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+  font-weight: bold;
+  text-shadow: 1px 1px #c6487d;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff74a3, #ffb3d1);
+}
+
+.magical-scene {
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.magic-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: hsl(13, 56%, 12%);
+  padding: 10px 20px;
+  background-color: #d33913;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(211, 57, 19, 0.4);
+  color: white;
+}
+
+.gift-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gift-buttons button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 16px;
+  background-color: #ff90b3;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.gift-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 144, 179, 0.5);
+}
+
+.gift-content {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fffafc;
+  border: 2px solid #ffacd2;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  color: #6a0572;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.music-player {
+  max-width: 400px;
+  margin: 40px auto 0;
+  padding: 16px;
+  background: #ffe0f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.music-note {
+  font-size: 1rem;
+  color: #6a0572;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.magic-message {
+  font-size: 1.3rem;
+  color: #5f0f40;
+  background: #fff0f5;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInText 2s ease forwards;
+  border: 2px dashed #ff8fab;
+}
+
+.gift-box {
+  text-align: center;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  margin-bottom: 30px;
+}
+
+.gift-box img {
+  width: 120px;
+  transition: transform 0.4s ease;
+}
+.gift-box:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hidden {
+  display: none;
+}
